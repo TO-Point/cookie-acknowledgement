@@ -6,7 +6,8 @@ function setCookie(name, value, days) {
     date.setTime(date.getTime() + (days*24*60*60*1000));
     expires = "; expires=" + date.toUTCString();
   }
-  document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+  var domain = "; domain=point-cookie-acknowledgement-09jaj28.webflow.io"; // will be point.com
+  document.cookie = name + "=" + (value || "") + expires + domain + "; path=/";
 }
 
 // Function to get a cookie by name
