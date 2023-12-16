@@ -38,7 +38,7 @@ function checkCookie() {
 document.addEventListener("DOMContentLoaded", function () {
   var acknowledgeBtn = document.getElementById("cookie-acknowledge");
   acknowledgeBtn.addEventListener("click", function () {
-    setCookie("acknowledged", "true", 30); // Set the cookie for 7 days
+    setCookie("acknowledged", "true", 30); // Set the cookie for 30 days
     document.getElementById("cookie-wrapper").style.display = "none";
   });
 
