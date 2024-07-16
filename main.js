@@ -29,8 +29,14 @@ function checkCookie() {
     // If the acknowledged cookie exists, hide the cookie wrapper
     document.getElementById("cookie-wrapper").style.display = "none";
   } else {
-    // If the acknowledged cookie does not exist, add the show class
-    document.getElementById("cookie-wrapper").classList.add("show");
+    // If the acknowledged cookie does not exist, add the show class after 1 second delay
+    var cookieWrapper = document.getElementById("cookie-wrapper");
+    setTimeout(function () {
+      cookieWrapper.classList.add("show");
+      setTimeout(function () {
+        cookieWrapper.style.opacity = "1";
+      }, 500); // Wait 500ms before changing the opacity to 1
+    }, 1000); // Wait 1 second before adding the show class
   }
 }
 
